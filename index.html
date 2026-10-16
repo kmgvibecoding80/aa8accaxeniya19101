@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ACCA AA Конспект</title>
+<meta name="description" content="Интерактивный конспект для подготовки к экзамену ACCA AA (Audit and Assurance): главы A–E, примеры с ответами, поиск и прогресс.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f3f6fb; --surface:#ffffff; --surface-2:#eef2f8; --ink:#0f1e3a; --ink-2:#4a5871; --line:#d7dfeb;
+  --focus:#0f62fe; --tick:#15803d; --tick-soft:#e3f5e8;
+  --A:#2563eb; --A-ink:#1d4ed8; --A-soft:#e7eefe;
+  --B:#f59e0b; --B-ink:#9a5200; --B-soft:#fff2d9;
+  --C:#14b8a6; --C-ink:#0f766e; --C-soft:#dbf6f1;
+  --D:#8b5cf6; --D-ink:#6d28d9; --D-soft:#efe8fe;
+  --E:#e11d74; --E-ink:#be185d; --E-soft:#fde5ef;
+  --shadow:0 1px 2px rgba(15,30,58,.06),0 4px 14px rgba(15,30,58,.06);
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#0a1222; --surface:#111b30; --surface-2:#17233c; --ink:#e7edf8; --ink-2:#a5b3cb; --line:#26344f;
+    --focus:#7cb1ff; --tick:#4ade80; --tick-soft:#12301f;
+    --A:#3b82f6; --A-ink:#8ab4ff; --A-soft:#15264a;
+    --B:#f59e0b; --B-ink:#fbbf4c; --B-soft:#33240a;
+    --C:#14b8a6; --C-ink:#4fd8c4; --C-soft:#0d2e2c;
+    --D:#8b5cf6; --D-ink:#b9a0ff; --D-soft:#251a45;
+    --E:#ec4899; --E-ink:#f78bbd; --E-soft:#3a1426;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#0a1222; --surface:#111b30; --surface-2:#17233c; --ink:#e7edf8; --ink-2:#a5b3cb; --line:#26344f;
+  --focus:#7cb1ff; --tick:#4ade80; --tick-soft:#12301f;
+  --A:#3b82f6; --A-ink:#8ab4ff; --A-soft:#15264a;
+  --B:#f59e0b; --B-ink:#fbbf4c; --B-soft:#33240a;
+  --C:#14b8a6; --C-ink:#4fd8c4; --C-soft:#0d2e2c;
+  --D:#8b5cf6; --D-ink:#b9a0ff; --D-soft:#251a45;
+  --E:#ec4899; --E-ink:#f78bbd; --E-soft:#3a1426;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+}
+.ch-A{--c:var(--A);--ci:var(--A-ink);--cs:var(--A-soft)}
+.ch-B{--c:var(--B);--ci:var(--B-ink);--cs:var(--B-soft)}
+.ch-C{--c:var(--C);--ci:var(--C-ink);--cs:var(--C-soft)}
+.ch-D{--c:var(--D);--ci:var(--D-ink);--cs:var(--D-soft)}
+.ch-E{--c:var(--E);--ci:var(--E-ink);--cs:var(--E-soft)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Unbounded","Golos Text",system-ui,sans-serif;line-height:1.2;margin:0}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+strong.term{font-weight:600;color:var(--ink)}
+.tr{color:var(--ink-2);font-weight:400;font-style:italic}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero-in{max-width:1280px;margin:0 auto;padding:28px 24px 24px}
+.hero-top{display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+.kicker{display:flex;gap:6px;margin-bottom:12px}
+.kicker i{display:block;width:28px;height:8px;border-radius:4px}
+.hero h1{font-size:clamp(24px,4vw,38px);font-weight:700;letter-spacing:-.01em}
+.hero h1 span{color:var(--ink-2);font-weight:500}
+.hero p.lead{margin:10px 0 0;color:var(--ink-2);max-width:62ch}
+.theme-btn{flex:none;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:14px}
+.theme-btn:hover{border-color:var(--ink-2)}
+.exam{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.exam-card{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.exam-card b{display:block;font-family:"Unbounded",sans-serif;font-size:20px;font-weight:600;margin-bottom:2px}
+.exam-card span{color:var(--ink-2);font-size:14px;line-height:1.45;display:block}
+
+/* ---------- Layout ---------- */
+.layout{max-width:1280px;margin:0 auto;padding:24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:28px;align-items:start}
+.nav{position:sticky;top:16px;min-width:0}
+.nav-inner{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
+.nav-title{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:2px 6px 10px;font-weight:600}
+.nav ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.tab{display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 10px;align-items:center;text-decoration:none;color:var(--ink);padding:9px 10px 10px;border-radius:10px;border:1px solid transparent;position:relative}
+.tab:hover{background:var(--cs)}
+.tab[aria-current="true"]{background:var(--cs);border-color:var(--c)}
+.tab-letter{grid-row:span 2;width:36px;height:36px;border-radius:9px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:700;font-size:16px}
+.ch-B .tab-letter,.ch-B .ch-letter{color:#2a1700}
+.tab-name{font-weight:600;font-size:14px;line-height:1.3}
+.tab-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-2)}
+.bar{flex:1;height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;width:0;background:var(--c);transition:width .3s}
+.overall{margin-top:14px;padding:12px 8px 4px;border-top:1px dashed var(--line)}
+.overall-row{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.overall-row b{color:var(--ink)}
+.overall .bar{--c:var(--tick);height:8px}
+.legend{font-size:12px;color:var(--ink-2);margin:10px 6px 0;line-height:1.45}
+
+/* ---------- Toolbar ---------- */
+.toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:6px 0 12px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.search{flex:1 1 280px;position:relative;min-width:0}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--ink-2);pointer-events:none}
+.search input{width:100%;padding:12px 40px 12px 42px;border-radius:12px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.search input::placeholder{color:var(--ink-2)}
+.search .clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;cursor:pointer;width:32px;height:32px;border-radius:8px;color:var(--ink-2);font-size:20px;line-height:1}
+.search .clear:hover{background:var(--surface-2)}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 14px;cursor:pointer;font-weight:500;font-size:14px;white-space:nowrap}
+.btn:hover{border-color:var(--ink-2)}
+.search-info{margin:0 0 12px;color:var(--ink-2);font-size:14px;min-height:1px}
+.search-info:empty{margin:0}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:28px;text-align:center;color:var(--ink-2)}
+
+/* ---------- Chapter ---------- */
+.chapter{margin-bottom:36px;scroll-margin-top:20px}
+.ch-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:12px;border-bottom:3px solid var(--c)}
+.ch-letter{flex:none;width:52px;height:52px;border-radius:12px 12px 4px 4px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:700;font-size:24px}
+.ch-head h2{font-size:clamp(18px,2.4vw,24px);font-weight:600}
+.ch-head .en{margin:2px 0 0;color:var(--ci);font-weight:600;font-size:14px}
+.ch-titles{min-width:0;flex:1}
+.ch-prog{flex:none;font-size:13px;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.topics{display:flex;flex-direction:column;gap:10px}
+
+/* ---------- Topic ---------- */
+.topic{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.topic.is-done{background:linear-gradient(90deg,var(--tick-soft),var(--surface) 40%)}
+.topic-head{display:flex;align-items:stretch}
+.topic-toggle{flex:1;min-width:0;display:flex;gap:14px;align-items:flex-start;text-align:left;background:none;border:0;padding:16px 12px 16px 16px;cursor:pointer}
+.topic-toggle:hover .t-title{color:var(--ci)}
+.code{flex:none;min-width:44px;text-align:center;padding:4px 8px;border-radius:8px;background:var(--cs);color:var(--ci);border:1px solid var(--c);font-family:"Unbounded",sans-serif;font-size:13px;font-weight:600;margin-top:2px}
+.t-titles{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}
+.t-title{font-family:"Unbounded",sans-serif;font-size:16px;font-weight:600;line-height:1.3;overflow-wrap:break-word;hyphens:auto}
+.t-en{font-size:14px;color:var(--ink-2);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.chip{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2);white-space:nowrap}
+.chev{flex:none;margin-top:6px;color:var(--ink-2);transition:transform .2s}
+.topic-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.tick{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:78px;border:0;border-left:1px dashed var(--line);background:none;cursor:pointer;color:var(--ink-2);font-size:11px;font-weight:600;padding:8px}
+.tick .box{width:30px;height:30px;border-radius:8px;border:2px solid var(--line);display:grid;place-items:center;color:transparent;transition:all .15s}
+.tick:hover .box{border-color:var(--tick)}
+.tick[aria-pressed="true"]{color:var(--tick)}
+.tick[aria-pressed="true"] .box{background:var(--tick);border-color:var(--tick);color:#fff}
+
+.topic-body{padding:4px 20px 20px 20px;border-top:1px solid var(--line)}
+.topic-body.anim{animation:open .22s ease-out}
+@keyframes open{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.sec-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--ci);margin:18px 0 8px}
+.points{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.points li{position:relative;padding-left:22px;overflow-wrap:anywhere}
+.points li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--c);transform:rotate(45deg)}
+.memo{margin-top:16px;background:var(--cs);border:1px solid var(--c);border-radius:12px;padding:14px 16px;display:flex;gap:12px}
+.memo-ic{flex:none;width:30px;height:30px;border-radius:8px;background:var(--c);color:#fff;display:grid;place-items:center}
+.ch-B .memo-ic{color:#2a1700}
+.memo b.lbl{display:block;font-family:"Unbounded",sans-serif;font-size:13px;color:var(--ci);margin-bottom:2px}
+.memo p{margin:0;overflow-wrap:anywhere}
+.example{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);padding:14px 16px}
+.ex-q{margin:0;overflow-wrap:anywhere}
+.ex-q .n{font-weight:700;color:var(--ci);margin-right:4px}
+.ans-btn{margin-top:10px;border:1.5px solid var(--c);color:var(--ci);background:var(--surface);border-radius:10px;padding:8px 14px;cursor:pointer;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.ans-btn:hover{background:var(--cs)}
+.ans-btn[aria-expanded="true"]{background:var(--c);color:#fff}
+.ch-B .ans-btn[aria-expanded="true"]{color:#2a1700}
+.answer{margin-top:12px;padding:12px 14px;border-radius:10px;background:var(--surface);border-left:4px solid var(--tick);overflow-wrap:anywhere}
+.answer .lbl{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--tick);margin-bottom:4px}
+mark{background:#ffe066;color:#1a1400;border-radius:3px;padding:0 1px}
+
+footer{max-width:1280px;margin:0 auto;padding:8px 24px 40px;color:var(--ink-2);font-size:13px}
+
+/* ---------- Mobile ---------- */
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr);padding:0 16px 16px;gap:0}
+  .hero-in{padding:20px 16px}
+  .exam{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{top:0;z-index:6;margin:0 -16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .nav-inner{border:0;border-radius:0;box-shadow:none;padding:8px 16px;background:var(--bg)}
+  .nav-title,.overall,.legend{display:none}
+  .nav ol{flex-direction:row;overflow-x:auto;gap:6px;scrollbar-width:none}
+  .nav ol::-webkit-scrollbar{display:none}
+  .nav li{flex:none}
+  .tab{grid-template-columns:auto auto;gap:0 8px;padding:6px 10px 6px 6px;border:1px solid var(--line);background:var(--surface)}
+  .tab-letter{width:28px;height:28px;font-size:13px;border-radius:7px}
+  .tab-name{font-size:13px;white-space:nowrap}
+  .tab-meta .bar{display:none}
+  .toolbar{position:static;padding-top:14px}
+  .mobile-progress{display:flex!important}
+  .chapter{scroll-margin-top:64px}
+}
+@media (max-width:520px){
+  .exam{gap:8px}
+  .exam-card{padding:10px 12px}
+  .exam-card b{font-size:16px}
+  .exam-card span{font-size:12.5px}
+  .topic-toggle{padding:14px 8px 14px 12px;gap:10px}
+  .topic-body{padding:4px 14px 16px}
+  .t-title{font-size:14px}
+  .t-en{font-size:13px}
+  .tick{min-width:60px}
+  .tick .lbl-t{display:none}
+  .ch-prog{display:none}
+  .btn{flex:1}
+  .hero-top{flex-direction:column}
+}
+.mobile-progress{display:none;width:100%;align-items:center;gap:10px;font-size:13px;color:var(--ink-2)}
+.mobile-progress .bar{--c:var(--tick)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="hero-top">
+      <div>
+        <div class="kicker" aria-hidden="true">
+          <i style="background:var(--A)"></i><i style="background:var(--B)"></i><i style="background:var(--C)"></i><i style="background:var(--D)"></i><i style="background:var(--E)"></i>
+        </div>
+        <h1>ACCA AA <span>· Audit and Assurance</span></h1>
+        <p class="lead">Интерактивный конспект по всему syllabus A–E: ключевые тезисы, шпаргалки «Запомни» и экзаменационные примеры с ответами. У английских терминов в скобках дан перевод на русский (при первом упоминании в теме). Отмечайте изученные темы галочкой — прогресс сохраняется в браузере.</p>
+      </div>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Переключить светлую/тёмную тему">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLbl">Тема</span>
+      </button>
+    </div>
+    <div class="exam" aria-label="Формат экзамена">
+      <div class="exam-card"><b>3 часа</b><span>Компьютерный экзамен (CBE), все вопросы обязательны</span></div>
+      <div class="exam-card"><b>Раздел A · 30</b><span>3 кейса × 5 объективных вопросов (OT) по 2 балла</span></div>
+      <div class="exam-card"><b>Раздел B · 70</b><span>3 вопроса с развёрнутым ответом: 30 + 20 + 20 баллов</span></div>
+      <div class="exam-card"><b>50%</b><span>Проходной балл — 50 из 100</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="nav" aria-label="Главы">
+    <div class="nav-inner">
+      <p class="nav-title">Главы syllabus</p>
+      <ol id="navList"></ol>
+      <div class="overall">
+        <div class="overall-row"><span>Общий прогресс</span><b id="overallTxt">0 / 0</b></div>
+        <div class="bar" role="progressbar" aria-label="Общий прогресс" id="overallBar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+      </div>
+      <p class="legend">Цвет главы повторяется во всех её элементах — используйте его как «индексную вкладку» папки рабочих документов.</p>
+    </div>
+  </aside>
+
+  <main id="main">
+    <div class="toolbar">
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label for="q" class="sr-only">Поиск по темам</label>
+        <input id="q" type="search" placeholder="Поиск: materiality, ISA 570, запасы…" autocomplete="off">
+        <button class="clear" id="clearQ" type="button" aria-label="Очистить поиск" hidden>×</button>
+      </div>
+      <button class="btn" id="expandAll" type="button">Развернуть все</button>
+      <button class="btn" id="collapseAll" type="button">Свернуть все</button>
+      <div class="mobile-progress"><span id="mobTxt">0 / 0</span><div class="bar" aria-hidden="true"><i id="mobBar"></i></div></div>
+    </div>
+    <p class="search-info" id="searchInfo" aria-live="polite"></p>
+    <div id="content"></div>
+  </main>
+</div>
+
+<footer>Конспект составлен по структуре syllabus ACCA AA. Ссылки на стандарты — ISA (IAASB), ISQM, IESBA/ACCA Code of Ethics. Сверяйте с актуальным syllabus и Study Guide на сайте ACCA.</footer>
+
+<script>
+const DATA = [
+{ id:"A", title:"Рамки аудита и регулирование", en:"Audit framework and regulation", short:"Рамки аудита", topics:[
+ { id:"A1", title:"Концепция assurance", en:"The concept of assurance", isa:["ISAE 3000","ISRE 2400","ISA 200"],
+   points:[
+    "**Assurance engagement** — задание, в котором специалист выражает вывод, повышающий доверие предполагаемых пользователей к оценке предмета задания по определённым критериям.",
+    "Пять элементов: **three-party relationship** (practitioner, responsible party, intended users), **subject matter**, **suitable criteria**, **sufficient appropriate evidence**, **written assurance report**.",
+    "**Reasonable assurance** (внешний аудит): высокий, но не абсолютный уровень уверенности; вывод в **positive form** — отчётность даёт **true and fair view**.",
+    "**Limited assurance** (review engagement): умеренная уверенность, меньше процедур (в основном inquiry и analytical procedures); вывод в **negative form** — «нам ничего не стало известно, что заставило бы нас полагать…».",
+    "Аудит не даёт абсолютной уверенности из-за **inherent limitations**: выборочное тестирование, профессиональные суждения, ограничения ВК, доказательства убеждают, но не являются окончательными.",
+    "**Expectation gap** — разрыв между ожиданиями общества (найти любой fraud, гарантировать точность) и реальной ответственностью аудитора."
+   ],
+   memo:"Аудит = Reasonable + Positive. Review = Limited + Negative. Пять элементов: Three parties, Subject matter, Criteria, Evidence, Report.",
+   examples:[{q:"Клиент просит провести обзорную проверку промежуточной отчётности вместо аудита, чтобы сэкономить. Чем будут отличаться уровень уверенности и форма вывода?",
+    a:"Review engagement даёт **limited assurance**: процедуры — в основном запросы и аналитика, детальные тесты почти не проводятся. Вывод даётся в **negative form**: «ничего не стало известно, что указывало бы на существенные искажения».\nАудит даёт **reasonable assurance** и вывод в **positive form** (true and fair). Пользователи должны понимать, что уверенность при обзорной проверке ниже."}]
+ },
+ { id:"A2", title:"Внешний аудит и регулирование", en:"External audit and regulation", isa:["ISA 200","ISA 210","Companies Act"],
+   points:[
+    "**Objective** аудитора (ISA 200): получить разумную уверенность, что ФО в целом не содержит существенных искажений вследствие **fraud or error**, и выразить мнение о её подготовке в соответствии с применимой концепцией.",
+    "**Management** отвечает за подготовку ФО и систему внутреннего контроля; аудитор — за выражение мнения. Аудит не снимает ответственность с руководства.",
+    "**Appointment**: аудитора назначают акционеры на общем собрании; первого аудитора и для заполнения случайной вакансии могут назначить директора.",
+    "**Removal**: обычной резолюцией акционеров с **special notice** (28 дней); аудитор вправе представить письменные возражения и выступить на собрании.",
+    "**Resignation**: письменное уведомление + **statement of circumstances** о причинах, которые нужно довести до сведения акционеров/кредиторов; аудитор может потребовать созыва собрания.",
+    "**Rights** аудитора: доступ к книгам и записям в любое время, право требовать информацию и объяснения, получать уведомления о собраниях, присутствовать и выступать на них.",
+    "**Eligibility**: член признанного надзорного органа (RSB, например ACCA). **Ineligible**: должностные лица и сотрудники клиента.",
+    "Стандарты: **IAASB** издаёт ISA и ISQM; **IESBA** — этический кодекс; национальные регуляторы проводят мониторинг аудиторских фирм."
+   ],
+   memo:"Права аудитора — «ДИСК»: Доступ к записям, Информация и объяснения, Собрания (уведомления), Комментарии (выступать). Уход/отстранение → письменно + statement of circumstances.",
+   examples:[{q:"Директора хотят сменить аудитора, потому что он настаивает на корректировке резерва под запасы. Какие права есть у аудитора при отстранении?",
+    a:"Отстранение возможно только обычной резолюцией акционеров с **special notice**. Аудитор вправе: получить копию уведомления; направить акционерам **written representations** с возражениями и потребовать их распространения; выступить на собрании, где рассматривается отстранение; при уходе — подать **statement of circumstances** с описанием разногласий по резерву. Эти права защищают независимость аудитора от давления руководства."}]
+ },
+ { id:"A3", title:"Корпоративное управление", en:"Corporate governance", isa:["UK Corporate Governance Code","OECD Principles"],
+   points:[
+    "**Corporate governance** — система, с помощью которой компании управляются и контролируются; защищает интересы акционеров и других стейкхолдеров.",
+    "Принцип **comply or explain**: листинговые компании соблюдают кодекс или объясняют отклонения в годовом отчёте.",
+    "Совет директоров: разделение ролей **Chair** и **CEO**; не менее половины совета (без Chair) — независимые **non-executive directors (NEDs)**; ежегодное переизбрание; регулярная оценка совета.",
+    "**Audit committee**: не менее трёх (в небольших компаниях — двух) независимых NEDs, хотя бы один с недавним релевантным финансовым опытом.",
+    "Функции audit committee: мониторинг целостности ФО, оценка ВК и управления рисками, надзор за внутренним аудитом, рекомендации по назначению внешнего аудитора, контроль его независимости и политики **non-audit services**.",
+    "**Remuneration committee** и **nomination committee** из независимых NEDs; директора не определяют собственное вознаграждение."
+   ],
+   memo:"Аудиторский комитет = «ФИВ-НН»: Финансовая отчётность, Internal control, Внутренний аудит, Назначение внешнего аудитора, Независимость аудитора.",
+   examples:[{q:"В листинговой компании CEO одновременно председатель совета; в совете 6 исполнительных директоров и 2 NEDs; аудиторского комитета нет. Укажите недостатки и рекомендации.",
+    a:"• Совмещение ролей Chair и CEO → концентрация власти. Рекомендация: разделить роли, назначить независимого Chair.\n• Недостаточно NEDs (2 из 8). Рекомендация: довести долю независимых NEDs минимум до половины совета (без Chair).\n• Нет **audit committee** → слабый надзор за ФО, ВК и внешним аудитом. Рекомендация: создать комитет из не менее трёх независимых NEDs, один — с финансовым опытом."}]
+ },
+ { id:"A4", title:"Профессиональная этика", en:"Professional ethics", isa:["IESBA Code","ACCA Code of Ethics","ISQM 1","ISA 220"],
+   points:[
+    "Пять **fundamental principles**: integrity, objectivity, professional competence and due care, confidentiality, professional behaviour.",
+    "Пять **threats**: self-interest, self-review, advocacy, familiarity, intimidation. На каждую угрозу — **safeguard**, а если его нет — отказ от услуги или клиента.",
+    "**Fees**: если гонорары от клиента-PIE превышают **15%** общего дохода фирмы два года подряд — раскрыть TCWG и провести **pre-issuance review**. **Contingent fees** за аудит запрещены. Просроченные гонорары — угроза self-interest (по сути, заём клиенту).",
+    "**Long association**: для PIE ключевой партнёр — не более **7 лет**, затем **cooling-off period** (для engagement partner — 5 лет).",
+    "**Non-audit services** для PIE: запрещены ведение учёта и подготовка ФО и большинство услуг, создающих self-review (например, разработка IT-систем для ФО).",
+    "**Gifts and hospitality** — только если они **trivial and inconsequential**. Прямой финансовый интерес члена команды в клиенте запрещён.",
+    "**Confidentiality**: раскрытие допустимо по закону (money laundering, суд), с согласия клиента, в общественных интересах или для защиты собственных профессиональных интересов.",
+    "**Conflict of interest**: уведомить обе стороны, получить согласие, разные команды, **information barriers**."
+   ],
+   memo:"Принципы «IOPCP»: Integrity, Objectivity, Professional competence, Confidentiality, Professional behaviour. Угрозы «SSAFI»: Self-interest, Self-review, Advocacy, Familiarity, Intimidation. Ответ: угроза → почему → safeguard.",
+   examples:[
+    {q:"Фирма пятый год подряд получает от листинговой компании Delta 17% общего дохода. Финансовый директор Delta также просит помочь подготовить отчётность. Определите угрозы и меры.",
+     a:"• Доля гонорара более 15% у PIE — **self-interest threat** (зависимость от клиента). Меры: раскрыть TCWG, провести **pre-issuance review** независимым партнёром; при сохранении ситуации — рассмотреть выход из задания.\n• Подготовка ФО для PIE — **self-review threat**: аудитор будет проверять собственную работу. Для листинговой компании услуга запрещена — отказать."},
+    {q:"Партнёр по заданию проверяет листинговую компанию 8 лет. Какая угроза и что делать?",
+     a:"**Familiarity threat** (и self-interest): партнёр может стать слишком лояльным к клиенту. Для PIE ключевой партнёр ротируется после 7 лет, затем **cooling-off period**. Партнёра нужно немедленно заменить."}]
+ },
+ { id:"A5", title:"Внутренний аудит", en:"Internal audit", isa:["ISA 610","IIA Standards"],
+   points:[
+    "**Internal audit** — независимая, объективная функция внутри организации, помогающая улучшать управление рисками, контроль и корпоративное управление.",
+    "Задания: мониторинг ВК, **value for money (VFM)** — economy, efficiency, effectiveness; compliance-проверки, IT-аудит, финансовые проверки, расследование fraud, **operational audits**.",
+    "Отличия от внешнего аудита: **цель** (улучшение операций vs мнение о ФО), **отчётность** (audit committee vs акционеры), **объём** (определяет руководство vs закон и ISA), **статус** (сотрудники vs независимая фирма).",
+    "Независимость ВА: подчинение **audit committee**, а не финансовому директору; отсутствие операционных функций; ротация персонала.",
+    "**Outsourcing** ВА: плюсы — экспертиза, гибкость, независимость, экономия на штате; минусы — хуже знание бизнеса, конфиденциальность, угроза независимости, если исполнитель — внешний аудитор.",
+    "Отчёт ВА: цели и объём, выполненная работа, выводы (findings), рекомендации, ответ руководства, сроки исполнения."
+   ],
+   memo:"VFM = 3E: Economy (дешевле), Efficiency (больше при тех же ресурсах), Effectiveness (цели достигнуты). Внешний vs внутренний: Цель, Отчётность, Объём, Статус.",
+   examples:[{q:"Руководитель внутреннего аудита подчиняется финансовому директору и сам ежемесячно выполняет сверку банковских счетов. Какие проблемы и как их устранить?",
+    a:"• Подчинение финансовому директору ограничивает независимость: он может влиять на объём проверок и скрывать выводы о своём отделе. Решение — подчинение **audit committee**.\n• Выполнение операционной функции (сверка банка) создаёт **self-review**: ВА проверяет собственную работу. Решение — передать сверку финансовому отделу, ВА только тестирует контроль."}]
+ }
+]},
+{ id:"B", title:"Планирование и оценка рисков", en:"Planning and risk assessment", short:"Планирование и риски", topics:[
+ { id:"B1", title:"Приём клиента и письмо-обязательство", en:"Client acceptance and engagement letters", isa:["ISA 210","ISA 220","ISQM 1"],
+   points:[
+    "До принятия клиента фирма оценивает: **ethics/independence** (угрозы, конфликты), **competence** (знание отрасли, ресурсы, сроки), **integrity** клиента и руководства, риски клиента, гонорар.",
+    "**Customer due diligence (KYC)** по требованиям противодействия отмыванию денег: идентификация клиента и бенефициаров.",
+    "**Professional clearance**: с разрешения клиента запросить предыдущего аудитора о причинах, по которым не следует принимать задание. Если клиент запрещает контакт — отказаться.",
+    "**Preconditions for an audit** (ISA 210): приемлемая концепция ФО; руководство признаёт ответственность за ФО, ВК и предоставление аудитору доступа к информации.",
+    "**Engagement letter**: цель и объём аудита; обязанности аудитора и руководства; концепция ФО; ожидаемая форма заключения; гонорар; сроки; ограничения аудита.",
+    "Письмо пересматривают при смене руководства, изменениях законодательства, признаках непонимания клиентом объёма аудита, изменении структуры группы."
+   ],
+   memo:"Принятие клиента — «ЭКИР»: Этика, Компетенция, Integrity клиента, Ресурсы. Порядок с предыдущим аудитором: разрешение клиента → запрос → ответ → решение.",
+   examples:[{q:"Потенциальный клиент отказывается дать разрешение на контакт с предыдущим аудитором. Как поступить?",
+    a:"Без разрешения клиента связаться с предыдущим аудитором нельзя (конфиденциальность). Отказ — серьёзный сигнал: возможно, клиент скрывает разногласия или проблемы с integrity. По правилам ACCA задание следует **отклонить**."}]
+ },
+ { id:"B2", title:"Планирование и существенность", en:"Planning and materiality", isa:["ISA 300","ISA 320"],
+   points:[
+    "Цель планирования (ISA 300): уделить внимание важным областям, своевременно выявить проблемы, правильно распределить персонал, эффективно организовать работу и контроль.",
+    "**Overall audit strategy** — объём, сроки и направление аудита. **Audit plan** — детальный характер, сроки и объём процедур.",
+    "**Materiality**: искажение существенно, если по отдельности или в совокупности может повлиять на экономические решения пользователей. Учитываются **величина** и **характер** (операции с директорами, нарушение ковенант).",
+    "Ориентиры (benchmarks): **0,5–1% revenue**, **5–10% profit before tax**, **1–2% total assets**.",
+    "**Performance materiality** — сумма ниже общей существенности, снижающая риск, что совокупность неисправленных и необнаруженных искажений превысит существенность.",
+    "Существенность пересматривается, если фактические показатели заметно отличаются от использованных при планировании.",
+    "**Interim audit** (до конца года: оценка рисков, тесты контролей) и **final audit** (после конца года: проверка сальдо, заключение)."
+   ],
+   memo:"Существенность: Revenue ½–1%, PBT 5–10%, Assets 1–2%. Performance materiality < Materiality. Цифры изменились — пересчитай!",
+   examples:[{q:"Выручка — $25 млн, прибыль до налогов — $1,8 млн, итого активы — $15 млн. Рассчитайте диапазон существенности по каждому показателю.",
+    a:"• Revenue: 0,5–1% × $25 млн = **$125 000 – $250 000**.\n• PBT: 5–10% × $1,8 млн = **$90 000 – $180 000**.\n• Total assets: 1–2% × $15 млн = **$150 000 – $300 000**.\nАудитор выбирает значение с учётом рисков (при высоком риске — ближе к нижней границе) и устанавливает performance materiality ниже выбранной суммы."}]
+ },
+ { id:"B3", title:"Аудиторский риск", en:"Audit risk", isa:["ISA 200","ISA 315 (Revised 2019)","ISA 330"],
+   points:[
+    "**Audit risk** — риск выразить неверное мнение при существенно искажённой ФО. **AR = IR × CR × DR**.",
+    "**Inherent risk** — подверженность утверждения искажению до учёта контролей. **Control risk** — риск, что ВК не предотвратит и не выявит искажение. IR × CR = **risk of material misstatement (RoMM)**.",
+    "**Detection risk** — риск, что процедуры аудитора не выявят искажение; включает sampling и non-sampling risk. Это единственный компонент, которым управляет аудитор.",
+    "ISA 315 (Revised 2019) — **inherent risk factors**: complexity, subjectivity, change, uncertainty, susceptibility to misstatement due to management bias or fraud.",
+    "**Significant risk** — риск у верхней границы спектра inherent risk; требует субстантивных процедур, специально направленных на этот риск.",
+    "Структура ответа: (1) факт из кейса → (2) почему это риск → (3) какая статья и утверждение, завышение или занижение → (4) ответ аудитора (конкретная процедура)."
+   ],
+   memo:"Высокий RoMM → снижаем Detection risk: больше выборка, процедуры ближе к концу года, опытнее команда. Ответ: Факт → Риск → Статья + утверждение → Процедура.",
+   examples:[
+    {q:"В середине года внедрена новая система учёта запасов; данные переносились вручную. Опишите аудиторский риск и ответ аудитора.",
+     a:"**Риск**: при переносе возможны ошибки и потери данных, контроли новой системы не отлажены → запасы могут быть искажены (**existence, completeness, accuracy**).\n**Ответ**: задокументировать и протестировать новую систему; сверить итоговые данные старой системы с начальными остатками новой; расширить тесты детализации по запасам на конец года (тест-подсчёты в обе стороны)."},
+    {q:"Бонус руководства зависит от прибыли. Какой риск?",
+     a:"Риск **management bias**: завышение выручки, занижение расходов и резервов (**occurrence, cut-off, valuation**). Ответ: усиленный профессиональный скептицизм, тесты cut-off выручки, проверка оценок и резервов, тестирование журнальных проводок в конце года."}]
+ },
+ { id:"B4", title:"Понимание бизнеса и аналитические процедуры", en:"Understanding the entity and analytical procedures", isa:["ISA 315 (Revised 2019)","ISA 520"],
+   points:[
+    "Аудитор должен понимать: **entity and its environment** (отрасль, регулирование, собственники, стратегия, показатели), **applicable financial reporting framework**, **system of internal control**.",
+    "Источники: беседы с руководством, файлы прошлого года, протоколы совета, управленческая отчётность, сайт и пресса, наблюдение, инспекция, аналитика.",
+    "**Engagement team discussion** — обсуждение подверженности ФО существенным искажениям, включая fraud.",
+    "**Analytical procedures** (ISA 520) обязательны на этапе **planning** (оценка рисков) и в **overall review** в конце; как substantive procedures — по усмотрению аудитора.",
+    "Коэффициенты: **gross margin** = GP / Revenue; **receivables days** = Receivables / Revenue × 365; **payables days** = Payables / Cost of sales × 365; **inventory days** = Inventory / COS × 365; **current ratio** = CA / CL; **quick ratio** = (CA − Inventory) / CL.",
+    "Неожиданные колебания → потенциальный риск. Например, рост gross margin при росте затрат может означать завышенную выручку или заниженную себестоимость (cut-off)."
+   ],
+   memo:"Аналитика обязательна дважды: на планировании и в overall review. Дни дебиторов растут → риск безнадёжных долгов (valuation).",
+   examples:[{q:"Дебиторская задолженность выросла с $2 млн до $3,2 млн, выручка — с $16 млн до $17 млн. Рассчитайте receivables days и оцените риск.",
+    a:"Прошлый год: 2 / 16 × 365 = **46 дней**. Текущий: 3,2 / 17 × 365 = **69 дней**.\nРост примерно на 23 дня говорит о проблемах с возвратом долгов → риск **завышения дебиторки (valuation)** при недостаточном резерве или ошибок cut-off. Ответ: проанализировать aged receivables listing, проверить поступления после отчётной даты, обсудить достаточность резерва."}]
+ },
+ { id:"B5", title:"Fraud, законы и нормативы", en:"Fraud, laws and regulations", isa:["ISA 240","ISA 250","ISA 260"],
+   points:[
+    "Два вида fraud (ISA 240): **fraudulent financial reporting** (намеренное искажение ФО) и **misappropriation of assets** (хищение активов).",
+    "Основная ответственность за предотвращение и выявление fraud — на **management и TCWG**. Аудитор получает разумную уверенность в отсутствии существенных искажений и сохраняет **professional scepticism**.",
+    "Презюмируемые риски: **revenue recognition** (опровержимый) и **management override of controls** (неопровержимый) → тестирование journal entries, оценок, необычных операций.",
+    "При выявлении fraud — сообщить соответствующему уровню руководства и TCWG; при подозрении в отмывании денег — **MLRO** и компетентному органу; **tipping off** (предупреждение клиента) — правонарушение.",
+    "ISA 250: законы с **direct effect** на ФО (налоги, пенсии, корпоративное право) — получить достаточные доказательства соблюдения. **Other laws** (лицензии, охрана труда, экология) — только inquiry и инспекция переписки с регуляторами.",
+    "При несоблюдении законов (**NOCLAR**) аудитор оценивает влияние на ФО (резервы, раскрытия), сообщает TCWG и при необходимости — регулятору."
+   ],
+   memo:"Fraud = Ложная отчётность + Кража активов. Revenue — опровержимо, management override — НЕопровержимо. Отмывание → MLRO, без tipping off.",
+   examples:[{q:"Ассистент заметил, что финансовый директор вносит крупные ручные проводки по выручке в последний день года. Какие процедуры нужны?",
+    a:"Это признак **management override** и завышения выручки (**occurrence, cut-off**). Процедуры: протестировать ручные и необычные журнальные проводки в конце года и после него; получить подтверждающие документы (заказы, GDN, договоры); проверить сторнирование этих продаж после отчётной даты; сообщить TCWG; повысить professional scepticism."}]
+ },
+ { id:"B6", title:"Аудиторская документация", en:"Audit documentation", isa:["ISA 230"],
+   points:[
+    "Документация должна позволять **experienced auditor**, не связанному с аудитом, понять характер, сроки и объём процедур, их результаты, полученные доказательства и значимые выводы.",
+    "Рабочий документ: клиент, период, статья, цель, выполненная работа, результаты и вывод, **preparer** и дата, **reviewer** и дата, перекрёстные ссылки (cross-references).",
+    "Значимые вопросы (**significant matters**) и обсуждения с руководством документируются с указанием, с кем и когда.",
+    "**Assembly** окончательного файла — не позднее **60 дней** после даты заключения; после этого документы не удаляются.",
+    "Хранение — не менее **5 лет** с даты заключения. Рабочие документы — собственность аудитора и конфиденциальны.",
+    "Зачем: доказательство соблюдения ISA, помощь в планировании и руководстве, контроль качества, основа для следующего года."
+   ],
+   memo:"60 дней — собрать файл, 5 лет — хранить. Каждый рабочий документ: Кто? Когда? Что сделал? Какой вывод?",
+   examples:[{q:"Перечислите, что должно быть на рабочем документе по тестированию дебиторской задолженности.",
+    a:"Наименование клиента; отчётная дата; статья (Receivables); цель теста (например, existence); описание совокупности, выборки и метода отбора; выполненные процедуры; найденные исключения и их оценка; **вывод**; инициалы и дата исполнителя; инициалы и дата проверившего; ссылки на lead schedule и другие документы."}]
+ }
+]},
+{ id:"C", title:"Внутренний контроль", en:"Internal control", short:"Внутренний контроль", topics:[
+ { id:"C1", title:"Компоненты системы внутреннего контроля", en:"Components of internal control", isa:["ISA 315 (Revised 2019)"],
+   points:[
+    "Пять компонентов: **control environment**, **entity's risk assessment process**, **entity's process to monitor the system of internal control**, **information system and communication**, **control activities**.",
+    "**Control environment** — отношение и действия руководства и TCWG: культура честности, философия руководства, оргструктура, распределение полномочий, кадровая политика.",
+    "**Control activities**: authorisation, reconciliations, verifications, physical controls, **segregation of duties**, information processing controls.",
+    "**General IT controls**: управление доступом (пароли), контроль изменений программ, резервное копирование, непрерывность. **Application controls**: проверки ввода (check digits, range checks), batch totals, последовательная нумерация.",
+    "**Limitations** ВК: человеческая ошибка, **collusion**, **management override**, нестандартные операции, соотношение затрат и выгод."
+   ],
+   memo:"Компоненты ВК: Среда, Оценка рисков, Мониторинг, Информационная система, Контрольные действия. Контрольные действия: Авторизация, Сверки, Верификация, Физическая защита, Разделение обязанностей.",
+   examples:[{q:"Почему даже хорошо разработанная система ВК не даёт полной гарантии от искажений?",
+    a:"Из-за **inherent limitations**: сотрудники ошибаются или неверно понимают инструкции; несколько сотрудников могут вступить в **collusion** и обойти разделение обязанностей; руководство может **обойти контроли**; контроли рассчитаны на типичные операции и не охватывают нестандартные; часть контролей не внедряют из-за стоимости."}]
+ },
+ { id:"C2", title:"Документирование систем", en:"Documenting systems", isa:["ISA 315 (Revised 2019)","ISA 230"],
+   points:[
+    "**Narrative notes**: текстовое описание. Плюсы — просто, подходит для небольших систем. Минусы — громоздко для сложных систем, недостатки трудно увидеть.",
+    "**Flowcharts**: графическое изображение потока документов и контролей. Плюсы — наглядно, легко увидеть пробелы и разделение обязанностей. Минусы — долго составлять и обновлять.",
+    "**Internal Control Questionnaires (ICQ)**: вопросы «Есть ли контроль…?» (да/нет). Плюсы — быстро, полный охват. Минусы — клиент может преувеличить, необычные контроли могут быть пропущены.",
+    "**Internal Control Evaluation Questionnaires (ICEQ)**: «Возможна ли ошибка или fraud?» (например, «Можно ли отгрузить товар без счёта?»). Фокус на ключевых контрольных целях.",
+    "**Walk-through test**: проследить 1–2 операции от начала до конца, чтобы подтвердить, что документация соответствует реальной системе."
+   ],
+   memo:"ICQ спрашивает: «Есть ли контроль?» ICEQ: «Может ли что-то пойти не так?» Документирование всегда подтверждается walk-through.",
+   examples:[{q:"Аудитор впервые проверяет компанию со сложной системой продаж. Какой метод документирования лучше и как проверить его точность?",
+    a:"Для сложной системы лучше **flowchart**: наглядно показывает поток документов, места контролей и разделение обязанностей, недостатки легче заметить. Точность проверяется **walk-through test**: одна-две продажи прослеживаются от заказа до учёта поступления денег."}]
+ },
+ { id:"C3", title:"Ключевые циклы операций", en:"Key transaction cycles", isa:["ISA 315 (Revised 2019)","ISA 265"],
+   points:[
+    "**Sales**: заказ → проверка кредитного лимита → отгрузка (GDN) → счёт → учёт → оплата. Контроли: кредитные лимиты, сверка GDN со счетами, последовательная нумерация, выписки клиентам, сверка контрольного счёта.",
+    "**Purchases**: заявка → заказ (PO) → получение (GRN) → счёт → оплата. Контроли: авторизация заказов, утверждённые поставщики, **three-way match** (PO–GRN–invoice), авторизация платежей.",
+    "**Payroll**: найм/увольнение, учёт времени, расчёт, выплата. Контроли: авторизация HR, clock cards, проверка расчётов, авторизация ведомости, сравнение с прошлым месяцем.",
+    "**Inventory**: физическая защита, регулярные подсчёты, **perpetual inventory**, выявление устаревших запасов.",
+    "**Cash and bank**: разделение приёма денег и учёта, ежедневное депонирование, ежемесячная **bank reconciliation** с независимой проверкой, две подписи для крупных платежей.",
+    "**Capital expenditure**: авторизация советом, **non-current asset register**, регулярная сверка реестра с ГК и физическим наличием."
+   ],
+   memo:"Закупки: три документа — PO, GRN, Invoice (three-way match). Продажи: Credit check → GDN → Invoice → Statement.",
+   examples:[{q:"Отдел продаж принимает заказы по телефону, кредитный лимит не проверяется, отгрузочные накладные (GDN) не нумеруются. Определите недостатки и рекомендации.",
+    a:"• Нет проверки кредитного лимита → продажи неплатёжеспособным клиентам, безнадёжные долги. Рекомендация: система проверяет лимит до подтверждения заказа, превышение утверждает кредитный контролёр.\n• GDN не нумеруются → отгрузки без счетов, недоучёт выручки. Рекомендация: последовательная нумерация GDN и регулярная проверка последовательности на пропуски с привязкой к счетам."}]
+ },
+ { id:"C4", title:"Тесты контролей и сообщение о недостатках", en:"Tests of controls and ISA 265", isa:["ISA 330","ISA 265"],
+   points:[
+    "**Tests of controls** проверяют операционную эффективность контролей в течение периода: **inquiry**, **observation**, **inspection** (подписи, отметки), **reperformance**. Одного запроса недостаточно.",
+    "Если контроли эффективны, объём **substantive procedures** можно снизить; если нет — расширить.",
+    "Тест контроля проверяет **факт работы контроля**, а не правильность суммы: например, «проверить выборку счетов на наличие подписи об авторизации».",
+    "ISA 265: **significant deficiency** — недостаток, достаточно важный для внимания TCWG; сообщается **письменно** и своевременно.",
+    "Прочие недостатки — руководству, обычно в **report to management (management letter)**.",
+    "Формат: **deficiency → implication → recommendation** + оговорка, что аудит не предназначен для выявления всех недостатков и письмо — только для руководства."
+   ],
+   memo:"Ответ по ВК — 3 колонки: Недостаток | Последствие | Рекомендация (+ тест контроля, если спрашивают). Значительные недостатки — письменно TCWG.",
+   examples:[{q:"Сформулируйте тест контроля для контроля «Все счета поставщиков сверяются с заказом и GRN перед проводкой».",
+    a:"Отобрать выборку проведённых в течение года счетов поставщиков и проверить наличие соответствующих **PO и GRN**, а также подписи или отметки о сверке (three-way match). Дополнительно — **reperform** сверку по нескольким счетам: сравнить количество и цену в счёте, PO и GRN."}]
+ }
+]},
+{ id:"D", title:"Аудиторские доказательства", en:"Audit evidence", short:"Доказательства", topics:[
+ { id:"D1", title:"Утверждения руководства", en:"Financial statement assertions", isa:["ISA 315 (Revised 2019)","ISA 500"],
+   points:[
+    "По **операциям** (classes of transactions): **occurrence**, **completeness**, **accuracy**, **cut-off**, **classification**, **presentation**.",
+    "По **остаткам** (account balances): **existence**, **rights and obligations**, **completeness**, **accuracy, valuation and allocation**, **classification**, **presentation**.",
+    "Направление теста: **existence/occurrence** — от учётной записи к документу или активу (выявляет завышение). **Completeness** — от источника или актива к учёту (выявляет занижение).",
+    "Для активов и выручки главный риск — **overstatement**; для обязательств и расходов — **understatement**.",
+    "**Cut-off** — операции отражены в правильном периоде; проверяются документы (GDN, GRN) за несколько дней до и после отчётной даты."
+   ],
+   memo:"Учёт → Документ = Existence/Occurrence. Документ → Учёт = Completeness. Активы — на завышение, обязательства — на занижение.",
+   examples:[{q:"Аудитор выбрал позиции из реестра основных средств и осмотрел их. Какое утверждение проверяется? А если выбирать активы в цехе и искать их в реестре?",
+    a:"Из реестра к активу — **existence** (актив существует, не завышен). От актива к реестру — **completeness** (все активы учтены, не занижены). Утверждение определяется направлением теста."}]
+ },
+ { id:"D2", title:"Аудиторские процедуры и доказательства", en:"Audit procedures and evidence", isa:["ISA 500","ISA 505","ISA 520"],
+   points:[
+    "Доказательства должны быть **sufficient** (количество) и **appropriate** (качество: **relevance** и **reliability**).",
+    "Надёжность выше, если доказательство: из **независимого внешнего** источника; получено **самим аудитором**; **документальное**, а не устное; **оригинал**, а не копия; получено при **эффективных контролях**.",
+    "Методы: **inspection**, **observation**, **external confirmation**, **recalculation**, **reperformance**, **analytical procedures**, **inquiry**.",
+    "**Substantive procedures** = tests of details + substantive analytical procedures; обязательны для каждой существенной статьи.",
+    "Формулировка процедуры: **глагол + источник + цель** — например, «Сверить выборку поступлений после отчётной даты с остатками дебиторов для подтверждения existence»."
+   ],
+   memo:"Методы «AEIOU + RRC»: Analytical, Enquiry, Inspection, Observation… + Recalculation, Reperformance, Confirmation. Процедура = Глагол + Документ + Цель.",
+   examples:[{q:"Расположите по надёжности: (1) устное объяснение финансового директора; (2) подтверждение банка, полученное аудитором напрямую; (3) копия счёта поставщика из файлов клиента; (4) пересчёт амортизации аудитором.",
+    a:"Наиболее надёжные — (2) **внешнее подтверждение, полученное напрямую**, и (4) доказательство, полученное **самим аудитором**. Затем (3) — внешний документ, но копия у клиента. Наименее надёжное — (1) **устное** объяснение руководства, его нужно подтверждать."}]
+ },
+ { id:"D3", title:"Аудиторская выборка", en:"Audit sampling", isa:["ISA 530"],
+   points:[
+    "**Audit sampling** — применение процедур менее чем к 100% совокупности так, что у каждого элемента есть шанс попасть в выборку.",
+    "Методы: **random**, **systematic** (через интервал), **monetary unit sampling** (крупные суммы вероятнее), **haphazard** (без системы, но без предвзятости), **block selection** (блок подряд — обычно неприемлем).",
+    "**Sampling risk** — вывод по выборке отличается от вывода по всей совокупности. **Non-sampling risk** — ошибка из-за неверной процедуры или интерпретации.",
+    "Размер выборки растёт при высоком RoMM, низкой **tolerable misstatement**, высоком ожидаемом искажении, меньшем объёме других процедур.",
+    "Найденные искажения **проецируются** на совокупность; если результат близок к tolerable misstatement — расширить тестирование.",
+    "Выборка не нужна при 100% проверке (мало крупных позиций) или отборе специфических позиций (все крупные, все необычные)."
+   ],
+   memo:"Методы: Random, Systematic, MUS, Haphazard, Block (block — почти никогда). Больше риск → больше выборка.",
+   examples:[{q:"В выборке дебиторов на $400 000 из совокупности $2 000 000 найдено искажение $8 000. Каково прогнозируемое искажение?",
+    a:"Доля искажения: 8 000 / 400 000 = 2%. Прогноз: 2% × $2 000 000 = **$40 000**. Сравниваем с tolerable misstatement: если близко или выше — расширить выборку или попросить руководство скорректировать сальдо."}]
+ },
+ { id:"D4", title:"Запасы", en:"Inventory", isa:["ISA 501","IAS 2"],
+   points:[
+    "Если запасы существенны, аудитор обязан присутствовать на **inventory count** (ISA 501), если это практически возможно.",
+    "**До подсчёта**: изучить инструкции, данные прошлых лет, места хранения, запасы у третьих лиц.",
+    "**Во время**: наблюдать соблюдение инструкций; **test counts** в обе стороны (из листа на склад — existence, со склада в лист — completeness); записать данные **cut-off** (последние GRN и GDN); отметить повреждённые и устаревшие запасы.",
+    "**После**: сверить тест-подсчёты с итоговыми ведомостями, проверить cut-off по документам, проследить корректировки.",
+    "Оценка (IAS 2) — по **lower of cost and NRV**: себестоимость — по счетам поставщиков и распределению накладных расходов; NRV — по продажам после отчётной даты.",
+    "Запасы у третьих лиц — **external confirmation**; при **perpetual inventory** — тестируются подсчёты в течение года."
+   ],
+   memo:"Инвентаризация = До / Во время / После. Тест-подсчёты в обе стороны. Оценка — меньшая из Cost и NRV.",
+   examples:[{q:"Клиент проводит инвентаризацию 31 декабря. Перечислите процедуры аудитора во время подсчёта.",
+    a:"• Наблюдать соблюдение инструкций (счётчики работают парами, зоны отмечаются, движение запасов остановлено).\n• Выбрать позиции из листов подсчёта и найти на складе — **existence**; выбрать на складе и найти в листах — **completeness**.\n• Записать номера последних GRN и GDN для **cut-off**.\n• Отметить повреждённые, устаревшие и медленно оборачивающиеся запасы — **valuation**.\n• Выяснить, есть ли на складе запасы третьих лиц (**rights and obligations**)."}]
+ },
+ { id:"D5", title:"Дебиторская задолженность и выручка", en:"Receivables and revenue", isa:["ISA 505","ISA 500","IFRS 15"],
+   points:[
+    "**Receivables circularisation** (ISA 505): клиент подписывает запрос, аудитор сам **отправляет и получает** ответы напрямую.",
+    "**Positive confirmation** — дебитор отвечает в любом случае (надёжнее). **Negative confirmation** — только при несогласии (при низком риске и множестве мелких остатков).",
+    "Нет ответа → **alternative procedures**: поступления после отчётной даты, счета и GDN по составу остатка.",
+    "**Valuation**: **aged receivables** анализ, оплата после отчётной даты, переписка с проблемными клиентами, оценка **allowance for receivables**.",
+    "Выручка: substantive analytics (по месяцам, продуктам, маржа); **occurrence** — от журнала продаж к GDN и заказу; **completeness** — от GDN к счёту и журналу; **cut-off** — GDN до и после отчётной даты.",
+    "Если руководство запрещает рассылку — выяснить причины; при необоснованности — сообщить TCWG и оценить влияние на заключение."
+   ],
+   memo:"Подтверждения: подписывает клиент, отправляет и получает АУДИТОР. Нет ответа → деньги после отчётной даты. Positive надёжнее negative.",
+   examples:[{q:"Дебитор не ответил на запрос подтверждения остатка $45 000. Какие альтернативные процедуры?",
+    a:"• Проверить **поступления после отчётной даты** от этого клиента и сопоставить со счетами, входящими в остаток.\n• Для неоплаченной части — проверить **счета** и **GDN**, подписанные клиентом.\n• Изучить переписку и возраст долга на предмет спорных и безнадёжных сумм."}]
+ },
+ { id:"D6", title:"Кредиторская задолженность и начисления", en:"Payables and accruals", isa:["ISA 500","ISA 505"],
+   points:[
+    "Ключевой риск — **understatement**; основное утверждение — **completeness**.",
+    "**Supplier statement reconciliations**: сравнить остаток по выписке поставщика (внешний документ) с учётом; разницы — платежи и счета в пути.",
+    "Выборку поставщиков делают из **списка всех поставщиков**, включая крупных с малым или **нулевым** остатком.",
+    "**Search for unrecorded liabilities**: платежи и счета после отчётной даты — относятся ли к отчётному году и учтены ли.",
+    "**Cut-off**: GRN до отчётной даты — счёт в кредиторке или начислениях; после — не учтён.",
+    "**Accruals**: пересчёт, сравнение с прошлым годом, проверка счетов после отчётной даты (электроэнергия, проценты)."
+   ],
+   memo:"Кредиторы — тест на ЗАНИЖЕНИЕ. Бери поставщиков с нулевыми остатками и ищи неучтённые обязательства после отчётной даты.",
+   examples:[{q:"Почему при проверке кредиторов выборку не делают только из списка остатков на конец года?",
+    a:"Цель — **completeness**: все ли обязательства учтены. Неучтённый долг в списке остатков отсутствует и в выборку не попадёт. Поэтому выбирают из **внешних источников** (список поставщиков, выписки, счета после отчётной даты), включая крупных поставщиков с нулевым или малым остатком."}]
+ },
+ { id:"D7", title:"Банк и денежные средства", en:"Bank and cash", isa:["ISA 505","ISA 500"],
+   points:[
+    "**Bank confirmation letter**: запрос с разрешения клиента отправляет аудитор, банк отвечает напрямую аудитору; подтверждает остатки, кредиты, залоги, гарантии.",
+    "**Bank reconciliation**: получить сверку на отчётную дату; пересчитать; сверить остаток по банку с подтверждением, по книгам — с ГК.",
+    "**Outstanding lodgements**: проследить зачисление по выписке после отчётной даты — обычно в течение нескольких дней. **Unpresented cheques**: проследить списание; проверить, что чеки выписаны до конца года.",
+    "Задержки зачисления или давно не предъявленные чеки — признаки **window dressing** или ошибок.",
+    "**Cash count** для существенной наличности: пересчёт в присутствии сотрудника клиента, сверка с учётом."
+   ],
+   memo:"Банк = Подтверждение напрямую от банка + Сверка + Позиции в пути по выпискам после отчётной даты.",
+   examples:[{q:"В сверке на 31.12 есть поступление в пути $120 000, зачисленное банком только 20 января. Что это может означать?",
+    a:"Обычно поступления в пути зачисляются за 1–3 дня. Задержка до 20 января может указывать на **window dressing**: деньги получены после года, но отражены до 31.12, чтобы улучшить денежные средства и уменьшить дебиторку. Процедуры: проверить первичные документы и дату платежа клиента, обсудить с руководством, при необходимости — корректировка."}]
+ },
+ { id:"D8", title:"Основные средства и нематериальные активы", en:"Property, plant and equipment and intangibles", isa:["ISA 500","ISA 620","IAS 16","IAS 38"],
+   points:[
+    "**Existence**: выбрать активы из **non-current asset register** и осмотреть. **Completeness**: выбрать активы на месте и найти в реестре.",
+    "**Rights and obligations**: title deeds (недвижимость), регистрационные документы (транспорт), счета на имя клиента.",
+    "**Additions**: счета, авторизация совета, капитализация или расходы. **Disposals**: документы о продаже, пересчёт прибыли/убытка, исключение из реестра.",
+    "**Valuation**: пересчёт **depreciation**, обоснованность сроков полезного использования (полностью амортизированные активы ещё работают?), признаки **impairment**; переоценка — работа **expert**.",
+    "**Development costs** (IAS 38) капитализируются только при выполнении критериев «**PIRATE**»: Probable future economic benefits, Intention to complete, Resources adequate, Ability to use or sell, Technical feasibility, Expenditure reliably measured. **Research** — всегда расход."
+   ],
+   memo:"PIRATE — критерии капитализации разработок. Реестр → Актив = existence; Актив → Реестр = completeness.",
+   examples:[{q:"Компания капитализировала $500 000 расходов на разработку нового продукта. Какие процедуры нужны?",
+    a:"• Получить расшифровку расходов, сверить выборку со счетами и табелями — accuracy.\n• Проверить критерии IAS 38 (**PIRATE**): бизнес-план и бюджеты (resources, probable benefits), технические отчёты (technical feasibility), протоколы совета (intention).\n• Убедиться, что расходы на **research** не капитализированы.\n• Проверить начало амортизации с момента готовности продукта и признаки обесценения."}]
+ },
+ { id:"D9", title:"Займы, провизии и капитал", en:"Loans, provisions and equity", isa:["ISA 501","ISA 540","IAS 37"],
+   points:[
+    "**Loans**: подтверждение от кредитора; договор займа (условия, ставка, график, залоги); пересчёт процентов; разделение **current/non-current**; соблюдение **covenants** (нарушение → долг может стать краткосрочным, риск going concern).",
+    "**Provisions** (IAS 37) признаются при наличии **present obligation** из прошлого события, **probable** оттока ресурсов и **reliable estimate**.",
+    "Отток **possible** → раскрывается **contingent liability**; **remote** → ничего. **Contingent asset** раскрывается, если поступление probable.",
+    "Судебные иски (ISA 501): запрос юристам клиента (с согласия руководства), протоколы совета, анализ расходов на юристов, письменные представления.",
+    "**Accounting estimates** (ISA 540): проверить метод, данные и допущения; сравнить прошлые оценки с фактом; учесть management bias.",
+    "**Share capital and dividends**: протоколы совета, реестр акционеров, поступление денег за акции, утверждение и выплата дивидендов."
+   ],
+   memo:"IAS 37: Probable → провизия; Possible → раскрытие; Remote → ничего. Нарушены ковенанты → проверь классификацию долга и going concern.",
+   examples:[{q:"Против компании подан иск на $400 000; юристы считают проигрыш вероятным. Существенность — $100 000. Как поступить и что проверить?",
+    a:"Проигрыш probable, сумма надёжно оценивается → нужна **provision** по IAS 37. Процедуры: получить письменное мнение **юристов**; изучить переписку и протоколы; проверить расчёт суммы; проверить события после отчётной даты (решение суда); получить письменное представление руководства. Если провизия не создана — искажение $400 000 > существенности → корректировка или модифицированное мнение."}]
+ },
+ { id:"D10", title:"Автоматизированные инструменты и методы", en:"Automated tools and techniques", isa:["ISA 500","ISA 315 (Revised 2019)"],
+   points:[
+    "**Automated tools and techniques** (ранее **CAATs**) — использование компьютерных технологий в аудите.",
+    "**Audit software** анализирует данные клиента: отбор выборок, пересчёт (casting), поиск дубликатов и пропусков, стратификация, aging-анализ, сравнение файлов.",
+    "**Test data** — ввод фиктивных операций (корректных и ошибочных) в систему клиента для проверки **application controls** (например, отклоняются ли заказы сверх кредитного лимита).",
+    "**Data analytics** — анализ 100% совокупности, визуализация, выявление аномалий и трендов на всех этапах аудита.",
+    "Плюсы: тестирование всей совокупности, скорость, точность, проверка самой системы, экономия в долгосрочной перспективе.",
+    "Минусы: затраты на настройку (особенно в первый год), совместимость с системами клиента, нужна квалификация, риск повредить данные клиента при test data (работать с копией)."
+   ],
+   memo:"Audit software работает с ДАННЫМИ клиента. Test data проверяет ПРОГРАММУ клиента (контроли). Работай с копией файлов!",
+   examples:[{q:"Приведите три способа использования audit software при проверке дебиторской задолженности.",
+    a:"• Пересчитать (cast) остатки дебиторов и сверить с ГК.\n• Подготовить **aged analysis** и выделить просроченные остатки для оценки резерва.\n• Отобрать выборку для **circularisation** (например, monetary unit sampling); найти остатки сверх кредитного лимита и кредитовые остатки."}]
+ },
+ { id:"D11", title:"Использование работы других лиц", en:"Reliance on the work of others", isa:["ISA 610","ISA 620","ISA 402"],
+   points:[
+    "Аудитор несёт **единоличную ответственность** за мнение; использование работы других её не уменьшает.",
+    "**Internal auditors** (ISA 610): оценить **objectivity** (статус, подчинённость), **competence**, **systematic and disciplined approach**. Нельзя полагаться в областях значительных суждений и высокого риска.",
+    "При использовании работы ВА аудитор частично **reperform** их процедуры; при **direct assistance** — руководит и проверяет работу.",
+    "**Auditor's expert** (ISA 620): оценить **competence, capabilities, objectivity**; согласовать объём и цели; оценить допущения, методы и выводы (оценщик, актуарий).",
+    "**Service organisations** (ISA 402): при аутсорсинге (зарплата, IT) получить отчёт аудитора сервисной организации: **Type 1** (описание и дизайн контролей) или **Type 2** (дизайн и операционная эффективность)."
+   ],
+   memo:"Внутренний аудит: Objectivity, Competence, Systematic approach. Эксперт: Competence, Capabilities, Objectivity. Ответственность всегда у внешнего аудитора.",
+   examples:[{q:"Компания привлекла независимого оценщика для переоценки зданий. Аудитор хочет использовать его отчёт. Что нужно сделать?",
+    a:"Это **management's expert** (ISA 500). Аудитор оценивает его **competence** (членство в профорганизации, опыт), **capabilities** и **objectivity** (связи с клиентом); разбирается в объёме и методах работы; проверяет уместность **допущений и исходных данных**, сравнивает стоимость с рыночными данными; проверяет учёт и раскрытие переоценки."}]
+ },
+ { id:"D12", title:"Некоммерческие организации", en:"Not-for-profit organisations", isa:["ISA 200","ISA 315 (Revised 2019)"],
+   points:[
+    "**Not-for-profit organisations** (благотворительные фонды, клубы) имеют иные цели: не прибыль, а выполнение миссии и эффективное использование средств.",
+    "Особые риски: **completeness of income** (наличные пожертвования без документов), **restricted funds** (нецелевое использование), соблюдение устава и регулирования, **going concern** (зависимость от грантов).",
+    "Слабый ВК: мало персонала → нет **segregation of duties**, волонтёры без квалификации, неформальные процедуры, доминирование одного лица.",
+    "**Materiality** часто ниже; значимы искажения по характеру (нецелевое использование средств).",
+    "Процедуры: тестирование контролей сбора наличных, сравнение доходов с прошлыми периодами и бюджетом, проверка расходов целевых фондов по условиям грантов, изучение устава и протоколов."
+   ],
+   memo:"НКО: «Доход неполный, фонды целевые, контроль слабый». Главное утверждение по доходам — completeness.",
+   examples:[{q:"Благотворительный фонд собирает наличные пожертвования через уличные ящики. Какой риск и какие процедуры?",
+    a:"Риск — **completeness** доходов: деньги могут быть похищены до учёта, документов нет. Процедуры: протестировать контроли (опечатанные пронумерованные ящики, вскрытие двумя сотрудниками, ведомость и немедленное депонирование); сверить ведомости вскрытия с банковскими выписками; аналитика доходов по местам и периодам; если контролей нет — оценить ограничение объёма и влияние на заключение."}]
+ }
+]},
+{ id:"E", title:"Обзор и отчётность", en:"Review and reporting", short:"Обзор и отчётность", topics:[
+ { id:"E1", title:"События после отчётной даты", en:"Subsequent events", isa:["ISA 560","IAS 10"],
+   points:[
+    "**Adjusting events** (IAS 10) подтверждают условия, существовавшие на отчётную дату (банкротство дебитора, продажа запасов ниже себестоимости, решение по иску, поданному до даты) → корректировка ФО.",
+    "**Non-adjusting events** — условия возникли после отчётной даты (пожар, выпуск акций, крупное приобретение) → раскрытие, если существенно.",
+    "**Период 1** (отчётная дата → дата заключения): аудитор **активно** выполняет процедуры — протоколы, управленческая отчётность после даты, запросы руководству и юристам, движение денег и продажи после даты.",
+    "**Период 2** (дата заключения → выпуск ФО): обязанности **пассивные**; если аудитор узнал о факте — обсудить с руководством, при исправлении ФО выдать новое заключение.",
+    "**Период 3** (после выпуска ФО): также пассивные; при исправлении ФО — новое заключение с **Emphasis of Matter**; при отказе руководства — меры, чтобы на заключение не полагались."
+   ],
+   memo:"Подтверждает состояние НА дату → корректируем. Новое событие ПОСЛЕ → раскрываем. До подписания заключения — ищем активно, после — реагируем.",
+   examples:[{q:"Отчётная дата 31.12. 15.02 крупный дебитор (остаток $250 000, существенность $80 000) объявлен банкротом. Заключение ещё не подписано. Как поступить?",
+    a:"Банкротство подтверждает, что дебитор был неплатёжеспособен уже на 31.12 → **adjusting event**. Сумма существенна → нужен резерв или списание. Процедуры: получить документы о банкротстве, проверить поступления после даты, обсудить с руководством. При отказе корректировать — существенное искажение → **qualified opinion** («except for»)."}]
+ },
+ { id:"E2", title:"Непрерывность деятельности", en:"Going concern", isa:["ISA 570","IAS 1"],
+   points:[
+    "Руководство оценивает способность продолжать деятельность минимум **12 месяцев с отчётной даты**; аудитор оценивает уместность этого допущения.",
+    "Финансовые индикаторы: чистые обязательства, отрицательные денежные потоки, погашение займов без перспектив рефинансирования, нарушение ковенант, просрочка платежей, отказ поставщиков в кредите.",
+    "Операционные: потеря ключевого клиента, поставщика, рынка, лицензии или руководителей; нехватка персонала. Прочие: судебные иски, изменения законодательства.",
+    "Процедуры: анализ **cash flow forecasts** и допущений, переписки с банками, договоров займа, протоколов, торговли после отчётной даты; письменные представления о планах руководства.",
+    "Заключение: неопределённость **адекватно раскрыта** → немодифицированное мнение + раздел **Material Uncertainty Related to Going Concern**; **не раскрыта** → qualified или adverse; допущение **неуместно** → adverse."
+   ],
+   memo:"GC: раскрыто → unmodified + MURGC; не раскрыто → qualified/adverse; основа неверна → adverse. Горизонт — 12 месяцев от отчётной даты.",
+   examples:[{q:"Банковский кредит истекает через 2 месяца после отчётной даты, переговоры о продлении не завершены; руководство подробно раскрыло неопределённость. Какое заключение?",
+    a:"Есть **material uncertainty**, но она **адекватно раскрыта**. Мнение — **unmodified**, с отдельным разделом «**Material Uncertainty Related to Going Concern**» со ссылкой на примечание. До этого — процедуры: прогноз денежных потоков, переписка с банком, альтернативные источники финансирования."}]
+ },
+ { id:"E3", title:"Письменные представления", en:"Written representations", isa:["ISA 580"],
+   points:[
+    "**Written representations** — письменное заявление руководства аудитору, подтверждающее определённые вопросы или другие доказательства.",
+    "Обязательные: руководство выполнило ответственность за подготовку ФО; предоставило всю информацию и доступ; все операции отражены в учёте.",
+    "Прочие — по суждениям и намерениям руководства, где других доказательств мало (намерение удерживать инвестицию, оценка иска).",
+    "Это доказательство **не заменяет** другие доступные доказательства и само по себе недостаточно для существенных вопросов.",
+    "Дата — как можно ближе к дате заключения, **но не позднее** её; адресуется аудитору; подписывается руководством.",
+    "Отказ дать обязательные представления или серьёзные сомнения в честности руководства → **disclaimer of opinion**."
+   ],
+   memo:"Письменные представления дополняют, но не заменяют доказательства. Дата ≤ даты заключения. Отказ в обязательных → disclaimer.",
+   examples:[{q:"Финансовый директор отказывается подписать представление о том, что аудитору предоставлена вся информация. Последствия?",
+    a:"Это обязательное представление по ISA 580. Аудитор обсуждает причины отказа, пересматривает оценку **integrity** руководства и надёжность других доказательств. Если отказ сохраняется — достаточных доказательств нет, влияние всеобъемлющее → **disclaimer of opinion**."}]
+ },
+ { id:"E4", title:"Завершение аудита", en:"Audit finalisation and review", isa:["ISA 450","ISA 520","ISA 220","ISA 260","ISA 720"],
+   points:[
+    "ISA 450: накапливаются все искажения, кроме **clearly trivial**; руководство просят их исправить.",
+    "Неисправленные искажения оцениваются **по отдельности и в совокупности** с учётом характера; существенная совокупность → модификация мнения.",
+    "**Overall review**: аналитические процедуры в конце (ISA 520), соответствие ФО концепции и пониманию аудитора, пересмотр существенности и рисков.",
+    "**Engagement quality review** (ISA 220, ISQM 2) — для листинговых и рискованных заданий: независимый рецензент проверяет значимые суждения до подписания.",
+    "ISA 260: сообщение **TCWG** — значимые выводы, неисправленные искажения, трудности, недостатки ВК, независимость (для листинговых).",
+    "ISA 720: аудитор читает **other information** (годовой отчёт) на предмет существенных несоответствий с ФО и знаниями аудитора."
+   ],
+   memo:"Завершение: Искажения (450) → Overall review (520) → EQR (220) → Представления (580) → TCWG (260) → Заключение (700).",
+   examples:[{q:"Неисправленные искажения: $30 000 (запасы) и $45 000 (резерв). Существенность — $70 000. Что делать?",
+    a:"По отдельности оба ниже существенности, но **в совокупности** $75 000 > $70 000 → существенно. Аудитор просит руководство исправить хотя бы часть. Если после исправлений совокупность остаётся существенной (но не всеобъемлющей) → **qualified opinion** («except for»)."}]
+ },
+ { id:"E5", title:"Аудиторское заключение", en:"The auditor's report", isa:["ISA 700","ISA 701","ISA 705","ISA 706"],
+   points:[
+    "Элементы (ISA 700): заголовок, адресат, **Opinion**, **Basis for Opinion**, Going concern (если применимо), **Key Audit Matters** (для листинговых, ISA 701), Other information, обязанности руководства и аудитора, подпись, адрес, дата.",
+    "**Unmodified opinion**: ФО даёт true and fair view во всех существенных аспектах.",
+    "**Material misstatement**: существенно, но не всеобъемлюще → **qualified** («except for»); **pervasive** → **adverse**.",
+    "**Inability to obtain sufficient appropriate evidence**: существенно, но не всеобъемлюще → **qualified** («except for the possible effects»); pervasive → **disclaimer of opinion**.",
+    "**Pervasive** — влияние не ограничено отдельными статьями, или затрагивает значительную часть ФО, или касается раскрытий, фундаментальных для понимания ФО.",
+    "ISA 706: **Emphasis of Matter** — вопрос правильно раскрыт в ФО и фундаментален для понимания; **Other Matter** — вопрос вне ФО, важный для понимания аудита. Мнение при этом не модифицируется."
+   ],
+   memo:"Матрица: Искажение — Qualified / Adverse. Нет доказательств — Qualified / Disclaimer. Слева «существенно», справа «всеобъемлюще». EoM мнение НЕ меняет.",
+   examples:[
+    {q:"Клиент отказался создать провизию по иску $400 000. Существенность — $100 000, прибыль — $3 млн. Какое заключение?",
+     a:"Это **material misstatement** (в 4 раза выше существенности), но ограничено одной статьёй и не всеобъемлюще (около 13% прибыли). Мнение — **qualified «except for»**; в разделе **Basis for Qualified Opinion** описываются искажение и его влияние."},
+    {q:"Учётные данные по запасам уничтожены пожаром; запасы — 45% активов и влияют на себестоимость и прибыль. Альтернативных процедур нет.",
+     a:"Это **inability to obtain sufficient appropriate evidence**. Запасы влияют на ключевые показатели (активы, себестоимость, прибыль) → **pervasive**. Мнение — **disclaimer of opinion**; причина описывается в разделе Basis for Disclaimer of Opinion."}]
+ }
+]}
+];
+
+/* ---------- Helpers ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+/* ---------- Glossary: EN term → RU translation (shown in brackets on first mention in a topic) ---------- */
+const GLOSS = {
+ // A — framework, ethics, governance
+ "assurance engagement":"задание, обеспечивающее уверенность", "three-party relationship":"трёхсторонние отношения",
+ "practitioner":"исполнитель задания", "responsible party":"ответственная сторона", "intended users":"предполагаемые пользователи",
+ "subject matter":"предмет задания", "suitable criteria":"подходящие критерии", "sufficient appropriate evidence":"достаточные надлежащие доказательства",
+ "written assurance report":"письменный отчёт по заданию", "reasonable assurance":"разумная уверенность", "positive form":"позитивная форма",
+ "true and fair view":"достоверное и объективное представление", "limited assurance":"ограниченная уверенность", "review engagement":"обзорная проверка",
+ "inquiry":"запрос", "analytical procedures":"аналитические процедуры", "negative form":"негативная форма",
+ "inherent limitations":"неотъемлемые ограничения", "expectation gap":"разрыв ожиданий", "objective":"цель",
+ "fraud or error":"мошенничество или ошибка", "management":"руководство", "appointment":"назначение", "removal":"отстранение",
+ "special notice":"особое уведомление", "resignation":"уход аудитора по собственному желанию", "statement of circumstances":"заявление об обстоятельствах",
+ "rights":"права", "eligibility":"право быть аудитором", "ineligible":"не может быть аудитором", "RSB":"признанный надзорный орган",
+ "IAASB":"Совет по международным стандартам аудита и заданий, обеспечивающих уверенность", "IESBA":"Совет по международным стандартам этики для бухгалтеров",
+ "written representations":"письменные заявления", "corporate governance":"корпоративное управление", "comply or explain":"соблюдай или объясняй",
+ "chair":"председатель совета директоров", "CEO":"генеральный директор", "non-executive directors (NEDs)":"неисполнительные директора",
+ "NEDs":"неисполнительные директора", "audit committee":"комитет по аудиту", "non-audit services":"неаудиторские услуги",
+ "remuneration committee":"комитет по вознаграждениям", "nomination committee":"комитет по назначениям",
+ "fundamental principles":"основные принципы", "integrity":"честность", "objectivity":"объективность",
+ "professional competence and due care":"профессиональная компетентность и должная тщательность", "professional competence":"профессиональная компетентность",
+ "confidentiality":"конфиденциальность", "professional behaviour":"профессиональное поведение", "threats":"угрозы",
+ "self-interest":"личная заинтересованность", "self-review":"самопроверка", "advocacy":"защита интересов клиента", "familiarity":"близкое знакомство",
+ "intimidation":"запугивание", "safeguard":"мера защиты", "fees":"вознаграждение", "PIE":"организация, значимая для общества",
+ "TCWG":"лица, отвечающие за корпоративное управление", "pre-issuance review":"проверка до выпуска заключения",
+ "contingent fees":"условное вознаграждение, зависящее от результата", "long association":"длительная связь с клиентом",
+ "cooling-off period":"период «охлаждения»", "engagement partner":"партнёр по заданию", "key audit partner":"ключевой партнёр по аудиту",
+ "gifts and hospitality":"подарки и знаки гостеприимства", "trivial and inconsequential":"незначительные и несущественные",
+ "conflict of interest":"конфликт интересов", "information barriers":"информационные барьеры", "money laundering":"отмывание денег",
+ "self-interest threat":"угроза личной заинтересованности", "self-review threat":"угроза самопроверки", "familiarity threat":"угроза близкого знакомства",
+ "internal audit":"внутренний аудит", "value for money (VFM)":"соотношение цены и качества", "VFM":"соотношение цены и качества",
+ "economy":"экономичность", "efficiency":"эффективность", "effectiveness":"результативность", "compliance":"соблюдение требований",
+ "operational audits":"операционные аудиты", "outsourcing":"передача функции внешнему исполнителю",
+ // B — planning and risk
+ "ethics/independence":"этика и независимость", "competence":"компетентность", "customer due diligence (KYC)":"надлежащая проверка клиента («знай своего клиента»)",
+ "professional clearance":"согласование с предыдущим аудитором", "preconditions for an audit":"предварительные условия аудита",
+ "engagement letter":"письмо-обязательство", "overall audit strategy":"общая стратегия аудита", "audit plan":"план аудита",
+ "materiality":"существенность", "revenue":"выручка", "profit before tax":"прибыль до налогообложения", "total assets":"итого активы",
+ "performance materiality":"существенность для выполнения процедур", "interim audit":"промежуточный аудит", "final audit":"заключительный аудит",
+ "PBT":"прибыль до налогообложения", "audit risk":"аудиторский риск", "inherent risk":"неотъемлемый риск", "control risk":"риск средств контроля",
+ "risk of material misstatement (RoMM)":"риск существенного искажения", "RoMM":"риск существенного искажения", "detection risk":"риск необнаружения",
+ "sampling risk":"риск выборки", "non-sampling risk":"риск, не связанный с выборкой", "inherent risk factors":"факторы неотъемлемого риска",
+ "complexity":"сложность", "subjectivity":"субъективность", "change":"изменения", "uncertainty":"неопределённость",
+ "susceptibility to misstatement due to management bias or fraud":"подверженность искажению из-за предвзятости руководства или мошенничества",
+ "significant risk":"значительный риск", "existence/occurrence":"существование/возникновение", "existence":"существование", "completeness":"полнота", "accuracy":"точность", "occurrence":"возникновение",
+ "cut-off":"отнесение к правильному периоду", "valuation":"оценка", "management bias":"предвзятость руководства",
+ "professional scepticism":"профессиональный скептицизм", "entity and its environment":"организация и её окружение",
+ "applicable financial reporting framework":"применимая концепция подготовки финансовой отчётности", "system of internal control":"система внутреннего контроля",
+ "engagement team discussion":"обсуждение в аудиторской группе", "planning":"планирование", "overall review":"общий обзор в конце аудита",
+ "substantive procedures":"процедуры проверки по существу", "gross margin":"валовая маржа", "receivables days":"срок оборота дебиторской задолженности в днях",
+ "payables days":"срок оборота кредиторской задолженности в днях", "inventory days":"срок оборота запасов в днях",
+ "current ratio":"коэффициент текущей ликвидности", "quick ratio":"коэффициент быстрой ликвидности",
+ "aged receivables listing":"реестр дебиторов по срокам задолженности", "fraud":"мошенничество",
+ "fraudulent financial reporting":"мошенническое составление отчётности", "misappropriation of assets":"присвоение активов",
+ "revenue recognition":"признание выручки", "management override of controls":"обход средств контроля руководством",
+ "management override":"обход средств контроля руководством", "journal entries":"журнальные проводки",
+ "MLRO":"ответственный сотрудник по противодействию отмыванию денег", "tipping off":"предупреждение подозреваемого",
+ "direct effect":"прямое влияние", "other laws":"прочие законы", "NOCLAR":"несоблюдение законов и нормативных актов",
+ "experienced auditor":"опытный аудитор", "preparer":"исполнитель", "reviewer":"проверяющий", "assembly":"формирование окончательного файла",
+ "lead schedule":"сводная ведомость по статье",
+ // C — internal control
+ "control environment":"контрольная среда", "entity's risk assessment process":"процесс оценки рисков организацией",
+ "entity's process to monitor the system of internal control":"процесс мониторинга системы внутреннего контроля",
+ "information system and communication":"информационная система и коммуникация", "control activities":"контрольные действия",
+ "authorisation":"санкционирование", "reconciliations":"сверки", "verifications":"проверки", "physical controls":"физический контроль",
+ "segregation of duties":"разделение обязанностей", "information processing controls":"контроли обработки информации",
+ "general IT controls":"общие ИТ-контроли", "application controls":"контроли на уровне приложений", "check digits":"контрольные цифры",
+ "range checks":"проверка допустимого диапазона", "batch totals":"контрольные итоги пакета", "limitations":"ограничения", "collusion":"сговор",
+ "narrative notes":"описательные записи", "flowcharts":"блок-схемы", "flowchart":"блок-схема",
+ "internal control questionnaires (ICQ)":"анкеты по внутреннему контролю", "internal control evaluation questionnaires (ICEQ)":"анкеты оценки внутреннего контроля",
+ "ICQ":"анкета по внутреннему контролю", "ICEQ":"анкета оценки внутреннего контроля", "walk-through test":"сквозной тест — прослеживание операции",
+ "sales":"продажи", "purchases":"закупки", "payroll":"расчёт заработной платы", "inventory":"запасы", "cash and bank":"денежные средства и банк",
+ "capital expenditure":"капитальные затраты", "GDN":"отгрузочная накладная", "GRN":"приходная накладная", "PO":"заказ поставщику",
+ "invoice":"счёт", "three-way match":"трёхсторонняя сверка", "clock cards":"карточки учёта рабочего времени", "HR":"отдел кадров",
+ "perpetual inventory":"непрерывный учёт запасов", "bank reconciliation":"банковская сверка", "non-current asset register":"реестр внеоборотных активов",
+ "tests of controls":"тесты средств контроля", "observation":"наблюдение", "inspection":"инспектирование", "reperformance":"повторное выполнение",
+ "reperform":"повторно выполнить", "significant deficiency":"значительный недостаток", "report to management (management letter)":"письмо руководству",
+ "deficiency":"недостаток", "implication":"последствие", "recommendation":"рекомендация",
+ // D — evidence
+ "rights and obligations":"права и обязанности", "accuracy, valuation and allocation":"точность, оценка и распределение",
+ "classification":"классификация", "presentation":"представление и раскрытие", "overstatement":"завышение", "understatement":"занижение",
+ "sufficient":"достаточные", "appropriate":"надлежащие", "relevance":"уместность", "reliability":"надёжность",
+ "external confirmation":"внешнее подтверждение", "recalculation":"пересчёт", "tests of details":"детальные тесты",
+ "substantive analytical procedures":"аналитические процедуры по существу", "audit sampling":"аудиторская выборка",
+ "random":"случайный отбор", "systematic":"систематический отбор", "monetary unit sampling":"выборка денежных единиц",
+ "haphazard":"бессистемный отбор", "block selection":"блочный отбор", "tolerable misstatement":"допустимое искажение", "MUS":"выборка денежных единиц",
+ "inventory count":"инвентаризация запасов", "test counts":"контрольные пересчёты",
+ "lower of cost and NRV":"меньшая из себестоимости и чистой цены продажи", "NRV":"чистая цена возможной продажи",
+ "receivables circularisation":"рассылка запросов дебиторам", "circularisation":"рассылка запросов", "positive confirmation":"положительный запрос",
+ "negative confirmation":"отрицательный запрос", "alternative procedures":"альтернативные процедуры", "aged receivables":"дебиторы по срокам задолженности",
+ "aged analysis":"анализ по срокам задолженности", "allowance for receivables":"резерв по сомнительным долгам",
+ "supplier statement reconciliations":"сверки с выписками поставщиков", "search for unrecorded liabilities":"поиск неучтённых обязательств",
+ "accruals":"начисленные обязательства", "bank confirmation letter":"запрос-подтверждение в банк", "outstanding lodgements":"поступления в пути",
+ "unpresented cheques":"непредъявленные чеки", "window dressing":"приукрашивание отчётности", "cash count":"пересчёт наличных",
+ "title deeds":"правоустанавливающие документы", "additions":"поступления", "disposals":"выбытия", "depreciation":"амортизация",
+ "impairment":"обесценение", "expert":"эксперт", "development costs":"затраты на разработки", "research":"исследования",
+ "probable future economic benefits":"вероятные будущие экономические выгоды", "intention to complete":"намерение завершить",
+ "resources adequate":"ресурсы достаточны", "ability to use or sell":"возможность использовать или продать",
+ "technical feasibility":"техническая осуществимость", "expenditure reliably measured":"затраты надёжно оценены",
+ "loans":"займы", "covenants":"ковенанты — условия кредитного договора", "provisions":"оценочные обязательства (провизии)",
+ "provision":"оценочное обязательство", "present obligation":"существующая обязанность", "probable":"вероятный", "possible":"возможный",
+ "remote":"маловероятный", "reliable estimate":"надёжная оценка", "contingent liability":"условное обязательство", "contingent asset":"условный актив",
+ "accounting estimates":"бухгалтерские оценки", "share capital and dividends":"акционерный капитал и дивиденды", "current/non-current":"краткосрочные/долгосрочные",
+ "automated tools and techniques":"автоматизированные инструменты и методы", "CAATs":"компьютерные методы аудита", "audit software":"аудиторское ПО",
+ "test data":"тестовые данные", "data analytics":"анализ данных", "casting":"пересчёт итогов", "cast":"пересчитать итоги",
+ "internal auditors":"внутренние аудиторы", "systematic and disciplined approach":"систематический и упорядоченный подход",
+ "direct assistance":"непосредственная помощь", "auditor's expert":"эксперт аудитора", "management's expert":"эксперт руководства",
+ "capabilities":"возможности", "Type 1":"отчёт 1-го типа", "Type 2":"отчёт 2-го типа", "PIRATE":"мнемоника критериев капитализации", "service organisations":"обслуживающие организации", "not-for-profit organisations":"некоммерческие организации",
+ "completeness of income":"полнота доходов", "restricted funds":"целевые фонды",
+ // E — review and reporting
+ "going concern":"непрерывность деятельности", "adjusting events":"корректирующие события", "adjusting event":"корректирующее событие",
+ "non-adjusting events":"некорректирующие события", "emphasis of matter":"привлечение внимания к важным обстоятельствам",
+ "qualified opinion":"мнение с оговоркой", "qualified":"с оговоркой", "except for":"за исключением",
+ "cash flow forecasts":"прогнозы денежных потоков", "material uncertainty related to going concern":"существенная неопределённость в отношении непрерывности деятельности",
+ "material uncertainty":"существенная неопределённость", "unmodified":"немодифицированное", "adverse":"отрицательное",
+ "disclaimer of opinion":"отказ от выражения мнения", "clearly trivial":"явно незначительные",
+ "engagement quality review":"проверка качества выполнения задания", "other information":"прочая информация",
+ "opinion":"мнение", "basis for opinion":"основание для выражения мнения", "key audit matters":"ключевые вопросы аудита",
+ "unmodified opinion":"немодифицированное мнение", "material misstatement":"существенное искажение", "pervasive":"всеобъемлющее",
+ "inability to obtain sufficient appropriate evidence":"невозможность получить достаточные надлежащие доказательства",
+ "other matter":"прочие сведения", "basis for qualified opinion":"основание для мнения с оговоркой",
+ "basis for disclaimer of opinion":"основание для отказа от выражения мнения", "except for the possible effects":"за исключением возможного влияния"
+};
+const G = new Map();
+Object.entries(GLOSS).forEach(([k,ru]) => {
+  const key = esc(k);
+  const cs = !/\s/.test(k) && (k.match(/[A-Z]/g)||[]).length >= 2; // abbreviations match case-sensitively
+  G.set(key.toLowerCase(), {key, ru, cs});
+});
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\\/]/g, "\\$&");
+const TERM = `(?<![A-Za-z])(${[...G.values()].map(e=>reEsc(e.key)).sort((a,b)=>b.length-a.length).join("|")})(?![A-Za-z])`;
+const RX_ALL = new RegExp(`\\*\\*(.+?)\\*\\*|${TERM}`, "gi");
+const RX_PLAIN = new RegExp(TERM, "gi");
+
+function fmt(s, seen = new Set()){
+  const lookup = t => { const e = G.get(t.toLowerCase()); return e && !(e.cs && t !== e.key) ? e : null; };
+  // translation is skipped if the term was already translated in this topic, or sits in brackets right after its Russian equivalent
+  const tr = (e, str, off) => {
+    if (seen.has(e.key)) return "";
+    if (str[off-1] === "(" && /[а-яё]\s*$/i.test(str.slice(0, off-1))) return "";
+    seen.add(e.key);
+    return ` <span class="tr">(${esc(e.ru)}\u0001</span>`;
+  };
+  const plain = (m, t, off, str) => { const e = lookup(t); return e ? m + tr(e, str, off) : m; };
+  let out = esc(s).replace(RX_ALL, (m, bold, term, off, str) => {
+    if (bold === undefined) return plain(m, term, off, str);
+    const e = lookup(bold);
+    if (e) return `<strong class="term">${bold}</strong>` + tr(e, str, off);
+    return `<strong class="term">${bold.replace(RX_PLAIN, plain)}</strong>`;
+  });
+  // merge with an existing bracket right after the term: "X (перевод; пояснение)"
+  out = out.replace(/\u0001<\/span> \(/g, "; </span>").replace(/\u0001/g, ")");
+  return out.replace(/\n/g, "<br>");
+}
+const norm = s => String(s).toLowerCase().replace(/ё/g,"е").replace(/\*\*/g,"");
+const KEY = "acca-aa-progress-v1", THEME_KEY = "acca-aa-theme";
+
+function loadDone(){ try{ return new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); }catch(e){ return new Set(); } }
+function saveDone(){ try{ localStorage.setItem(KEY, JSON.stringify([...done])); }catch(e){} }
+let done = loadDone();
+const TOTAL = DATA.reduce((n,c)=>n+c.topics.length,0);
+
+const ICON_CHEV = '<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+const ICON_TICK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13l5 5L20 6"/></svg>';
+const ICON_BULB = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>';
+
+/* ---------- Render ---------- */
+function render(){
+  $("#navList").innerHTML = DATA.map(ch => `
+    <li><a class="tab ch-${ch.id}" href="#ch-${ch.id}" data-ch="${ch.id}">
+      <span class="tab-letter" aria-hidden="true">${ch.id}</span>
+      <span class="tab-name">${esc(ch.short)}</span>
+      <span class="tab-meta"><span class="tab-count" data-count="${ch.id}">0/${ch.topics.length}</span><span class="bar" aria-hidden="true"><i data-bar="${ch.id}"></i></span></span>
+    </a></li>`).join("");
+
+  $("#content").innerHTML = DATA.map(ch => `
+    <section class="chapter ch-${ch.id}" id="ch-${ch.id}" data-ch="${ch.id}" aria-labelledby="h-${ch.id}">
+      <header class="ch-head">
+        <span class="ch-letter" aria-hidden="true">${ch.id}</span>
+        <div class="ch-titles"><h2 id="h-${ch.id}">${esc(ch.title)}</h2><p class="en">${esc(ch.en)}</p></div>
+        <span class="ch-prog" data-chprog="${ch.id}"></span>
+      </header>
+      <div class="topics">${ch.topics.map(topicHTML).join("")}</div>
+    </section>`).join("") + '<div class="empty" id="empty" hidden>Ничего не найдено. Попробуйте другой запрос, например «ISA 315» или «существенность».</div>';
+}
+
+function topicHTML(t){
+  const isDone = done.has(t.id);
+  const seen = new Set();
+  const f = s => fmt(s, seen);
+  return `
+  <article class="topic${isDone?" is-done":""}" data-id="${t.id}">
+    <div class="topic-head">
+      <button class="topic-toggle" type="button" id="th-${t.id}" aria-expanded="false" aria-controls="tb-${t.id}">
+        <span class="code">${t.id}</span>
+        <span class="t-titles">
+          <span class="t-title">${esc(t.title)}</span>
+          <span class="t-en">${esc(t.en)}</span>
+          <span class="chips">${t.isa.map(i=>`<span class="chip">${esc(i)}</span>`).join("")}</span>
+        </span>
+        ${ICON_CHEV}
+      </button>
+      <button class="tick" type="button" aria-pressed="${isDone}" aria-label="Тема ${t.id} изучена">
+        <span class="box">${ICON_TICK}</span><span class="lbl-t">Изучено</span>
+      </button>
+    </div>
+    <div class="topic-body" id="tb-${t.id}" role="region" aria-labelledby="th-${t.id}" hidden>
+      <p class="sec-label">Ключевые пункты</p>
+      <ul class="points">${t.points.map(p=>`<li>${f(p)}</li>`).join("")}</ul>
+      <div class="memo"><span class="memo-ic" aria-hidden="true">${ICON_BULB}</span><div><b class="lbl">Запомни</b><p>${f(t.memo)}</p></div></div>
+      <p class="sec-label">Примеры</p>
+      ${t.examples.map((ex,i)=>`
+        <div class="example">
+          <p class="ex-q"><span class="n">Пример ${i+1}.</span>${f(ex.q)}</p>
+          <button class="ans-btn" type="button" aria-expanded="false" aria-controls="ans-${t.id}-${i}">Показать ответ</button>
+          <div class="answer" id="ans-${t.id}-${i}" hidden><span class="lbl">Ответ</span>${f(ex.a)}</div>
+        </div>`).join("")}
+    </div>
+  </article>`;
+}
+
+/* ---------- Behaviour ---------- */
+function setOpen(article, open, animate){
+  const btn = $(".topic-toggle", article), body = $(".topic-body", article);
+  btn.setAttribute("aria-expanded", String(open));
+  body.hidden = !open;
+  body.classList.toggle("anim", !!(open && animate));
+}
+
+function updateProgress(){
+  DATA.forEach(ch => {
+    const n = ch.topics.filter(t=>done.has(t.id)).length, total = ch.topics.length;
+    $(`[data-count="${ch.id}"]`).textContent = `${n}/${total}`;
+    $(`[data-bar="${ch.id}"]`).style.width = (n/total*100)+"%";
+    $(`[data-chprog="${ch.id}"]`).textContent = `${n} из ${total} изучено`;
+  });
+  const n = done.size, pct = Math.round(n/TOTAL*100);
+  $("#overallTxt").textContent = `${n} / ${TOTAL} · ${pct}%`;
+  $("#overallBar i").style.width = pct+"%";
+  $("#overallBar").setAttribute("aria-valuenow", pct);
+  $("#mobTxt").textContent = `Изучено ${n} / ${TOTAL}`;
+  $("#mobBar").style.width = pct+"%";
+}
+
+document.addEventListener("click", e => {
+  const tog = e.target.closest(".topic-toggle");
+  if (tog){ const a = tog.closest(".topic"); setOpen(a, tog.getAttribute("aria-expanded")!=="true", true); return; }
+
+  const tick = e.target.closest(".tick");
+  if (tick){
+    const a = tick.closest(".topic"), id = a.dataset.id;
+    if (done.has(id)) done.delete(id); else done.add(id);
+    // keep only known ids
+    tick.setAttribute("aria-pressed", String(done.has(id)));
+    a.classList.toggle("is-done", done.has(id));
+    saveDone(); updateProgress(); return;
+  }
+
+  const ans = e.target.closest(".ans-btn");
+  if (ans){
+    const box = document.getElementById(ans.getAttribute("aria-controls"));
+    const open = ans.getAttribute("aria-expanded")!=="true";
+    ans.setAttribute("aria-expanded", String(open));
+    ans.textContent = open ? "Скрыть ответ" : "Показать ответ";
+    box.hidden = !open;
+  }
+});
+
+$("#expandAll").addEventListener("click", () => $$(".topic").forEach(a => { if(!a.hidden) setOpen(a,true,false); }));
+$("#collapseAll").addEventListener("click", () => $$(".topic").forEach(a => setOpen(a,false,false)));
+
+/* ---------- Search ---------- */
+// index is built from rendered text, so Russian translations of terms are searchable too
+const INDEX = {};
+function buildIndex(){ $$(".topic").forEach(a => { INDEX[a.dataset.id] = norm(a.textContent); }); }
+let searchOpened = new Set();
+
+function runSearch(){
+  const raw = $("#q").value.trim();
+  const q = norm(raw);
+  $("#clearQ").hidden = !raw;
+  const terms = q.split(/\s+/).filter(Boolean);
+  let shown = 0;
+  // collapse topics that the previous search opened
+  searchOpened.forEach(id => { const a = $(`.topic[data-id="${id}"]`); if (a) setOpen(a,false,false); });
+  searchOpened = new Set();
+
+  $$(".topic").forEach(a => {
+    const id = a.dataset.id;
+    const hit = !terms.length || terms.every(w => INDEX[id].includes(w));
+    a.hidden = !hit;
+    if (hit) shown++;
+    if (hit && terms.length && q.length >= 3 && $(".topic-toggle",a).getAttribute("aria-expanded")!=="true"){
+      setOpen(a,true,false); searchOpened.add(id);
+    }
+  });
+  $$(".chapter").forEach(s => { s.hidden = !$$(".topic", s).some(a => !a.hidden); });
+  $("#empty").hidden = shown !== 0;
+  $("#searchInfo").textContent = terms.length ? `Найдено тем: ${shown} из ${TOTAL}` : "";
+}
+let tmr;
+$("#q").addEventListener("input", () => { clearTimeout(tmr); tmr = setTimeout(runSearch, 120); });
+$("#clearQ").addEventListener("click", () => { $("#q").value = ""; runSearch(); $("#q").focus(); });
+$("#q").addEventListener("keydown", e => { if (e.key === "Escape" && $("#q").value){ $("#q").value=""; runSearch(); } });
+
+/* ---------- Active chapter in nav ---------- */
+function initObserver(){
+  if (!("IntersectionObserver" in window)) return;
+  const links = $$(".tab");
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting){
+        const id = en.target.dataset.ch;
+        links.forEach(l => {
+          const on = l.dataset.ch === id;
+          if (on) l.setAttribute("aria-current","true"); else l.removeAttribute("aria-current");
+          if (on && window.matchMedia("(max-width:900px)").matches){
+            const ol = l.closest("ol"); const li = l.parentElement;
+            ol.scrollTo({left: li.offsetLeft - 16, behavior:"smooth"});
+          }
+        });
+      }
+    });
+  }, { rootMargin:"-25% 0px -65% 0px" });
+  $$(".chapter").forEach(s => io.observe(s));
+}
+
+/* ---------- Theme ---------- */
+function applyTheme(t){
+  if (t) document.documentElement.setAttribute("data-theme", t);
+  else document.documentElement.removeAttribute("data-theme");
+  const dark = t ? t==="dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  $("#themeLbl").textContent = dark ? "Светлая тема" : "Тёмная тема";
+}
+let theme = null;
+try{ theme = localStorage.getItem(THEME_KEY); }catch(e){}
+$("#themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  theme = cur === "dark" ? "light" : "dark";
+  try{ localStorage.setItem(THEME_KEY, theme); }catch(e){}
+  applyTheme(theme);
+});
+
+/* ---------- Init ---------- */
+render();
+buildIndex();
+// drop ids that no longer exist
+done = new Set([...done].filter(id => INDEX[id] !== undefined));
+applyTheme(theme);
+updateProgress();
+initObserver();
+</script>
+</body>
+</html>
